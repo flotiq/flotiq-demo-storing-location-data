@@ -1,0 +1,139 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.map-container {
+    width: 100%;
+    height: 700px;
+}
+
+.leaflet-control-geocoder {
+    font-size: 16px;
+    font-family: system-ui;
+    padding: 3px;
+    width: 320px;
+}
+
+.leaflet-control-geocoder-alternatives{
+    width: 100%;
+}
+
+.search-container {
+    background-color: #f0c800;
+    color: #FFF;
+    width: 600px;
+    max-height: 350px;
+    padding: 25px;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index: 5000;
+}
+
+.search-container.hide {
+	width:0;
+	height:0;
+	background-color:transparent;
+}
+.search-container.hide h1{
+ display:none;
+}
+
+.search-container.hide form{
+ display:none;
+}
+
+.leaflet-popup-content-wrapper {
+    background-color: #4a4a4a;
+    color: white;
+    width: 300px;
+}
+
+.store-name {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.store-street {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.store-row {
+    padding: 15px 0;
+    border-bottom: 1px solid black;
+    text-align: center;
+    align-items: center;
+}
+
+.store-directions__anchor, .store-directions__anchor:hover {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+
+input[name="searchAddress"],input[name="searchAddress"]:focus {
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+    outline: none;
+}
+
+button[type="submit"], button[type="submit"]:focus, #resetButton, #resetButton:focus {
+    background-color: transparent;
+    border: 4px solid black;
+    color: black;
+    border-radius: 0px;
+    padding: 10px 40px;
+}
+
+button[type="submit"]:hover, button[type="submit"]:active  {
+    color: white !important;
+    background-color: black !important;
+    border: 4px solid black !important;
+}
+
+.leaflet-right {
+    display: none;
+}
+
+.search-current-location {
+    float: right;
+    font-size: 48px;
+    color: black;
+    padding: 5px;
+}
+
+.search-current-location:hover {
+    cursor: pointer;
+}
+
+.store-directions {
+    display: flex;
+    align-items: center;
+}
+
+.store-directions a {
+    margin-left: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store-table {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+        crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container-fluid" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="search-container" id="search-container">
+		<div style="
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    height: 40px;
+		    width: 40px;
+		    background-color: #4a4a4a;
+		"><a title="Close" class="store-locator-max__toggle--minus" id="hide-button"><span style="
+		    cursor: pointer;
+		    height: 2px;
+		    width: 14px;
+		    position: absolute;
+		    margin: auto;
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		    right: 0;
+		    display: block;
+		    background: #fff;
+		"></span></a></div>
+                    <h1>FIND STORES NEAR YOU</h1>
+                    <form id="storeSearch">
+                        <h4>Find by address</h4>
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                name="searchAddress" 
+                                id="searchAddress" 
+                                placeholder="Search by address"
+                                value="">
+                        </div>
+                        <div class="form-buttons">
+                            <div>
+                                <button id="submitButton" type="submit" class="btn btn-primary">SEARCH</button>
+                                <button id="resetButton" type="button" class="btn btn-primary">RESET</button>
+                            </div>
+                            <span id="currentLocation" class="material-icons search-current-location">gps_fixed</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-map class="map-container"></div>
+    <div class="container store-table" id="storeTable">
+        <div class="row store-row">
+            <div class="col-6">
+                Retailers
+            </div>
+            <div class="col-3">
+                Distance
+            </div>
+            <div class="col-3">
+                Get Directions
+            </div>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?&libraries=places" async defer></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src='https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js'></script>
+    <script src="index.js"></script>    
+</body>
+</html>

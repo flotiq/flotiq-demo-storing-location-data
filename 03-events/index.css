@@ -1,0 +1,45 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.map-container {
+    width: 100%;
+    height: 700px;
+}
+
+.leaflet-control-geocoder {
+    font-size: 16px;
+    font-family: system-ui;
+    padding: 3px;
+    width: 320px;
+}
+
+.leaflet-control-geocoder-alternatives{
+    width: 100%;
+}
+
+.search-container {
+    background-color: #f0c800;
+    color: #FFF;
+    width: 600px;
+    max-height: 350px;
+    padding: 25px;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index: 5000;
+}
+
+.search-container.hide {
+	width:0;
+	height:0;
+	background-color:transparent;
+}
+.search-container.hide h1{
+ display:none;
+}
+
+.search-container.hide form{
+ display:none;
+}
